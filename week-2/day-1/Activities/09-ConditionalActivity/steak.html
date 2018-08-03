@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="response"></div>
+    <div id="response2"></div>
+    <script>
+        var isSteak = confirm("Do you eat steak?");
+        if (isSteak) {
+            document.getElementById("response").innerHTML = "Here's a steak sandwich!";
+        } else {
+            document.getElementById("response").innerHTML = "Here's a tofu stir-fry!";
+        }
+        var birthYear = prompt("What is your birth year?");
+        if (birthYear > 1997) {
+            document.getElementById("response2").innerHTML = "No sake for you!";
+        } else {
+            document.getElementById("response2").innerHTML = "Have some sake too!";
+        }
+    </script>
+
+</body>
+
+</html>

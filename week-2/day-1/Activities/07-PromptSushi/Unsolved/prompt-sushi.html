@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Sushi Prompt - Unsolved</title>
-  </head>
-  <body>
 
-    <script type="text/javascript">
+<head>
+  <meta charset="UTF-8">
+  <title>Sushi Prompt - Unsolved</title>
+</head>
+
+<body>
+
+  <script type="text/javascript">
 
     // Write code here!
 
-var one = confirm("Do you like sushi?");
-var two = prompt("What kind of sushi do you like?");
-alert("You like sushi: " + one);
-alert("You like " + two + " sushi!");
+    var one = confirm("Do you like sushi?");
 
-    </script>
+    if (one) {
+      one = "yes";
+      alert("You like sushi: " + one);
+      var two = prompt("What kind of sushi do you like?");
+      alert("You like " + two + " sushi!");
+    } else {
+      one = "no";
+      alert("You don't like sushi? What's wrong with you?");
+    }
 
-  </body>
+
+  </script>
+
+</body>
+
 </html>
