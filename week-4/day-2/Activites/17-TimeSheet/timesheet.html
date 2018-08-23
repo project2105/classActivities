@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron text-center">
+                    <h1>Employee Data Management</h1>
+                    <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <h3>Add Employee</h3>
+                    <label for="employeeName">Employee Name</label>
+                    <input id="employeeName" type="text" class="form-control">
+                    <label for="role">Role</label>
+                    <input id="role" type="text" class="form-control">
+                    <label for="startDate">Start Date</label>
+                    <input id="startDate" type="text" class="form-control">
+                    <label for="monthlyRate">Monthly Rate</label>
+                    <input id="monthlyRate" type="text" class="form-control">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-success">Add Employee</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <h2>Current Employees</h2>
+                    <table class="table">
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Role</th>
+                            <th>Start Date</th>
+                            <th>Months Worked</th>
+                            <th>Monthly Rate ($)</th>
+                            <th>Total Billed ($)</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyALLjdNcrjT5UHTAfTAS1luKSirorcgWUA",
+            authDomain: "first-project-32a14.firebaseapp.com",
+            databaseURL: "https://first-project-32a14.firebaseio.com",
+            projectId: "first-project-32a14",
+            storageBucket: "first-project-32a14.appspot.com",
+            messagingSenderId: "580341857547"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

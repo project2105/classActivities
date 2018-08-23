@@ -33,22 +33,13 @@
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
 
       // Obtain a reference to the tbody element in the DOM
-      var table = $('tbody');
       // Create and save a reference to new empty table row
-      var newRow = $('<tr>');
       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
-      var newTd = $('<td>').text(response);
-      var newTd2 = $('<td>');
-      var newTd3 = $('<td>');
       // Append the td elements to the new table row
-      newRow.append(newTd);
-      newRow.append(newTd2);
-      newRow.append(newTd3);
       // Append the table row to the tbody element
-      table.append(newRow);
     });
 
     // Repeat the above logic to add rows for two more movies of your choice
