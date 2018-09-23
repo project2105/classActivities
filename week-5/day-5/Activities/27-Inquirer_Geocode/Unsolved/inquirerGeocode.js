@@ -9,24 +9,56 @@
 
 // Include the geocoder NPM package (Remember to run "npm install geocoder"!)
 var geocoder = require("geocoder");
-
-// Take in the command line arguments
-var nodeArgs = process.argv;
-
-// Create an empty string for holding the address
+var inquirer = require("inquirer");
 var address = "";
 
-// Capture all the words in the address (again ignoring the first two Node arguments)
-for (var i = 2; i < nodeArgs.length; i++) {
+// Create a "Prompt" with a series of questions.
+inquirer
+  .prompt([
+    // Here we create a basic text prompt.
+    {
+      type: "input",
+      message: "What city do you want?",
+      name: "city"
+    },
+    {
+      type: "input",
+      message: "What state is this in?",
+      name: "state",
+    },
+    {
+      type: "input",
+      message: "Street address?",
+      name: "street",
+    }
+  ])
+  .then(function (inquirerResponse) {
+    // If the inquirerResponse confirms, we displays the inquirerResponse's username and pokemon from the answers.
+    if (inquirerResponse.city && inquirerResponse.state && inquirerResponse.street) {
+      address = street + '' + city + '' + state;
+    } else {
+      console.log('Improper request.');
+    }
+  });
 
-  // Build a string with the address.
-  address = address + "" + nodeArgs[i];
-  console.log(address);
 
-}
+// // Take in the command line arguments
+// var nodeArgs = process.argv;
+
+// // Create an empty string for holding the address
+
+
+// // Capture all the words in the address (again ignoring the first two Node arguments)
+// for (var i = 2; i < nodeArgs.length; i++) {
+
+//   // Build a string with the address.
+//   address = address + "" + nodeArgs[i];
+//   console.log(address);
+
+// }
 
 // Then use the Google Geocoder to geocode the address
-geocoder.geocode(address, function(err, data) {
+geocoder.geocode(address, function (err, data) {
 
   // Then console log the result and stringify it.
   // Note the argument of "2" being included in the JSON stringify. This makes the JSON output pretty.

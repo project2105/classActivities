@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Content!</title>
 </head>
-
 <body>
 
   <h1>Drink Selection!</h1>
@@ -31,9 +29,7 @@
 
     // 1. Create code that "grabs" the div with the matching id (#drink-options);
     // ...
-    var drinks = document.getElementById("drink-options");
-    var newUl = document.createElement('ul');
-    drinks.appendChild(newUl);
+
 
     // ...
 
@@ -42,18 +38,10 @@
     // HINT: You will need to use each of the following methods: createElement, textContent, appendChild
     // ...
 
-    for (var i = 0; i < drinkList.length; i++) {
-      var newLi = document.createElement("li");
-      newLi.textContent = drinkList[i];
-      newUl.appendChild(newLi);
-    }
-
-
 
     // ...
 
   </script>
 
 </body>
-
 </html>

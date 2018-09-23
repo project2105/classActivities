@@ -11,16 +11,21 @@
 
 // Include the geocoder NPM package (Remember to run "npm install geocoder"!)
 
+var geocode = require('../lib/index')()
 
+var places = ['New York', 'Heidelberg', 'Tokio', 'Cape Town']
+geocode(places, function (err, res) {
+  // outputs geocoded result
+})
+console.log(places);
 
 
 // Take in the command line arguments
-
+var location = process.argv[2];
 
 
 
 // Build your address as an array or string
-
 
 
 

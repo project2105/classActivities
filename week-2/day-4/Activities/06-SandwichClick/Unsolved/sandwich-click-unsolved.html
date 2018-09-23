@@ -17,23 +17,19 @@
   <h3 id="grilledcheese">Grilled Cheese</h3>
   <h3 id="roastbeef">Roast Beef</h3>
 
-  <div id="image-div"></div>
-
   <script type="text/javascript">
 
     // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
     // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
     // It's useful to become familiar with now.
 
-    $(document).ready(function () {
+    $(document).ready(function() {
 
       // VARIABLES
       // ====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
-      var pbjCount = 0;
-      var gcCount = 0;
-      var rbCount = 0;
+
 
       // ...
 
@@ -43,30 +39,12 @@
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
 
-      $("#pbj").on("click", function () {
-        pbjCount++;
-        alert("Peanut butter jelly time!" + "You have eaten " + pbjCount + ".");
-        $('#image-div').empty().prepend('<img id="theImg" src="https://proxy.duckduckgo.com/iur/?f=1&image_host=http%3A%2F%2Fafterhoursdenver.org%2Fwp-content%2Fuploads%2F2013%2F01%2Fpbj.png&u=https://afterhoursdenver.org/wp-content/uploads/2013/01/pbj.png"' width
-          = "400px" /)
-      });
-
-      $("#grilledcheese").on("click", function () {
-        gcCount++;
-        alert("Soooo cheesy!" + "You have eaten " + gcCount + ".");
-        $('#image-div').empty().prepend('<img id="theImg" src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.s-nbcnews.com%2Fi%2Fnewscms%2F2017_15%2F1206905%2Fhomemade-grilled-cheese-sandwich-today-170411-tease_8025e9554cec4f29903612d1f6ea752d.jpg&f=1" width="400px" />')
-      });
-
-      $("#roastbeef").on("click", function () {
-        rbCount++;
-        alert("Something about beef!" + "You have eaten " + rbCount + ".");
-        $('#image-div').prepend('<img id="theImg" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-63AcrHMNg0k%2FVgu0jFdaM8I%2FAAAAAAAAJHA%2F-VOKQGj2HqI%2Fs1600%2F12036628_566304016853255_3754320379369665962_n.jpg&f=1" />')
-      });
 
       // ...
 
     });
 
-  </script>
+</script>
 
 </body>
 
